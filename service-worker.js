@@ -7,7 +7,7 @@ const INMUTABLE_CACHE = 'inmutable_v1';
 
 const APP_SHELL = [
 
-    '/',
+    //'/',
     'index.html',
     'vendor/bootstrap/css/bootstrap.min.css',
     'css/gestion.css',
