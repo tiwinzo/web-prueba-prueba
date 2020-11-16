@@ -1,5 +1,5 @@
 
-
+importScripts('js/service-worker-utils.js');
 
 const STATIC_CACHE = 'estatico_v1';
 const DYNAMIC_CACHE = 'dinamico_v1';
@@ -13,7 +13,9 @@ const APP_SHELL = [
     'css/gestion.css',
     'img/principal.jpg',
     'vendor/jquery/jquery.min.js',
-    'vendor/bootstrap/js/bootstrap.bundle.min.js'
+    'vendor/bootstrap/js/bootstrap.bundle.min.js',
+    'js/app.js',
+    'js/service-worker-utils.js'
 
 ];
 
@@ -22,6 +24,19 @@ const APP_SHELL_INMUTABLE = [
     'https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap',
     'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i'
 ];
+
+
+
+
+fetch('https://pokeapi.co/api/v2/pokemon/1')
+    .then( respuesta => respuesta.json() )
+    .then( almacenado => {
+        
+        console.log(almacenado.id)
+        console.log(almacenado.name)
+    });
+
+
 
 
 
@@ -70,7 +85,7 @@ self.addEventListener('fetch', event => {
             return res;
         } else {
 
-            return fetch( e.request ).then( newRes => {
+            return fetch( event.request ).then( newRes => {
 
                 return actualizaCacheDinamico( DYNAMIC_CACHE, event.request, newRes );
 
@@ -82,3 +97,7 @@ self.addEventListener('fetch', event => {
 
     event.respondWith( respuesta );
 });
+
+
+
+
