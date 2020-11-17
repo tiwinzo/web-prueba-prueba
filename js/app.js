@@ -2,7 +2,7 @@
 
 
 var url = window.location.href;
-var swLocation = '/App-demo/service-worker.js';
+var swLocation = '/web-prueba-prueba/service-worker.js';
 
 
 if ( navigator.serviceWorker ) {
