@@ -11,7 +11,7 @@ const APP_SHELL = [
     'index.html',
     'vendor/bootstrap/css/bootstrap.min.css',
     'css/gestion.css',
-    '/img/0001.jpg',
+    'img/0003.png',
     'vendor/jquery/jquery.min.js',
     'vendor/bootstrap/js/bootstrap.bundle.min.js',
     'js/app.js',
