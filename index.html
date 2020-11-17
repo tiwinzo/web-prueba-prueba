@@ -80,20 +80,23 @@
 
 
 
-  <div style="background: aliceblue;" id="prueba">
+  <div style="background: aliceblue;">
+    <h1 class="text-center">Web - Service - Pokemon</h1>
+    <div style="background:bisque;" id="prueba">
 
+    </div>
   </div>
 
 <script>
 
-  fetch('https://pokeapi.co/api/v2/pokemon/1')
+  fetch('https://pokeapi.co/api/v2/pokemon/5')
   .then( respuesta => respuesta.json() )
   .then( almacenado => {
 
     let elemento = document.getElementById("prueba")
     elemento.innerHTML = `
-    <p>${almacenado.id}</p>
-    <p>${almacenado.name}</p>
+    <p>El id es: ${almacenado.id}</p>
+    <p>El nombre es: ${almacenado.name}</p>
     `;
         
         console.log(almacenado.id)
