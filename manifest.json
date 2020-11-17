@@ -1,6 +1,6 @@
 {
     "short_name": "App-demo",
-    "name": "aplicacion demo",
+    "name": "App demo qwerty",
     "start_url": "index.html",
     "background_color": "#3498db",
     "theme_color": "#3498db",
@@ -48,6 +48,4 @@
             "sizes": "512x512"
         }
       ]
-
-
 }
