@@ -13,6 +13,7 @@
 
     <!-- Styles -->
     <link href="css/gestion.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -79,9 +80,26 @@
 
 
 
-  <div style="background-color: aliceblue;" id='imprimir'>
-      
+  <div style="background: aliceblue;" id="prueba">
+
   </div>
+
+<script>
+
+  fetch('https://pokeapi.co/api/v2/pokemon/1')
+  .then( respuesta => respuesta.json() )
+  .then( almacenado => {
+
+    let elemento = document.getElementById("prueba")
+    elemento.innerHTML = `
+    <p>${almacenado.id}</p>
+    <p>${almacenado.name}</p>
+    `;
+        
+        console.log(almacenado.id)
+        console.log(almacenado.name)
+  });
+</script>
 
 
 

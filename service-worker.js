@@ -28,13 +28,10 @@ const APP_SHELL_INMUTABLE = [
 
 
 
-fetch('https://pokeapi.co/api/v2/pokemon/1')
-    .then( respuesta => respuesta.json() )
-    .then( almacenado => {
-        
-        console.log(almacenado.id)
-        console.log(almacenado.name)
-    });
+
+
+
+    
 
 
 
