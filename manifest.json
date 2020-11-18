@@ -2,8 +2,8 @@
     "short_name": "App-demo",
     "name": "App demo PWA",
     "start_url": "index.html",
-    "background_color": "#3498db",
-    "theme_color": "#3498db",
+    "background_color": "#4F2E1F",
+    "theme_color": "#4F2E1F",
     "display": "standalone",
     "orientation": "portrait",
     "icons": [
