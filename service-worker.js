@@ -5,6 +5,7 @@ const STATIC_CACHE = 'estatico_v1';
 const DYNAMIC_CACHE = 'dinamico_v1';
 const INMUTABLE_CACHE = 'inmutable_v1';
 
+
 const APP_SHELL = [
 
     //'/',
@@ -24,8 +25,6 @@ const APP_SHELL_INMUTABLE = [
     'https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap',
     'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i'
 ];
-
-
 
 
 
@@ -56,11 +55,8 @@ self.addEventListener('activate', event => {
             if (  key !== DYNAMIC_CACHE && key.includes('dynamic') ) {
                 return caches.delete(key);
             }
-
         });
-
     });
-
     event.waitUntil( respuesta );
 });
 
@@ -77,13 +73,9 @@ self.addEventListener('fetch', event => {
             return fetch( event.request ).then( newRes => {
 
                 return actualizaCacheDinamico( DYNAMIC_CACHE, event.request, newRes );
-
             });
-
         }
-
     });
-
     event.respondWith( respuesta );
 });
 
